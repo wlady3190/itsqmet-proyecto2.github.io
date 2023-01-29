@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CONTABILIDAD</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-car-front"> CONCESIONARIA AQUILES CASTRO</i>
+
+            </a>
+        </div>
+        <form class="container-fluid justify-content-start">
+            <a href="index.html">
+                <button class="btn btn-outline-success mx-4" type="button">COTIZACIONES</button>
+            </a>
+            <button class="btn btn-sm btn-outline-secondary" type="button" disabled>CONTABILIDAD</button>
+        </form>
+    </nav>
+
+    <form class="container p-4" action="#">
+
+
+
+
+
+        <div class="mb-3">
+            <label for="nombre-empleado" class="form-label">Nombre del empleado</label>
+            <input type="text" class="form-control" id="nombre-empleado">
+        </div>
+        <div class="mb-3">
+            <label for="cargo" class="form-label">Seleccionar cargo</label>
+            <select class="form-select" aria-label="Default select example" id="cargo">
+                <option value="" disabled selected>Escoja</option>
+                <option value="admin">Administrativo</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="operario">Operario</option>
+                <option value="calidad">Control de calidad</option>
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label for="sueldoBase" class="form-label">Sueldo base</label>
+            <input type="number" class="form-control" id="sueldoBase" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="horasExtras" class="form-label">Horas extras</label>
+            <input type="number" class="form-control" id="horasExtras">
+        </div>
+        <!-- SELECCIONAR EL MODELO -->
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            id="botonSueldo">
+            Generar Rol
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">ROL DEL PAGOS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">COTIZACIÓN</h5>
+                                <p class="card-text">Estimado cliente, se prensentan los costos que tendrá el automóvil
+                                </p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Nombre: <span id="print-nombre"></span></li>
+                                <li class="list-group-item">Cargo: <span id="print-cargo"></span></li>
+                                <li class="list-group-item">Sueldo a recibir: <span id="print-sueldo-total"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+
+    </form>
+
+
+
+    <script src="js/contabilidad.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
